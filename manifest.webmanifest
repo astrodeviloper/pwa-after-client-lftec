@@ -1,0 +1,12 @@
+{
+  "name": "A.F.T.E.R for LFTEC Clients",
+  "short_name": "AFTER Client",
+  "description": "Portal de chamados e orçamentos para clientes LFTEC.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0A9651",
+  "background_color": "#090b1f",
+  "icons": []
+}
