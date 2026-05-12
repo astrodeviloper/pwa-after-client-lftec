@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+
+  <title>A.F.T.E.R for LFTEC Clients</title>
+
+  <meta name="theme-color" content="#0A9651" />
+  <meta name="background-color" content="#090b1f" />
+  <meta
+    name="description"
+    content="Portal de chamados e orçamentos para clientes LFTEC."
+  />
+
+  <link rel="manifest" href="./manifest.webmanifest" />
+
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="AFTER Client" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #090b1f;
+    }
+
+    .app-frame {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #090b1f;
+    }
+
+    .fallback {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #090b1f;
+      z-index: -1;
+    }
+
+    .fallback strong {
+      color: #0A9651;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fallback">
+    <p>
+      Carregando <strong>A.F.T.E.R Client</strong>...
+    </p>
+  </div>
+
+  <iframe
+    class="app-frame"
+    src="https://script.google.com/macros/s/AKfycbz_ZrhkTJMshnK9kC5CmfAkqvOAPwb8CbMAX8G99e01Er6Oh4kZ2OY7luwGMLxTE7d56w/exec"
+    title="A.F.T.E.R Client"
+    allow="clipboard-read; clipboard-write"
+  ></iframe>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./sw.js')
+          .catch(function(error) {
+            console.error('Erro ao registrar service worker:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
