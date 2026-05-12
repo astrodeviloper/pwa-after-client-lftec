@@ -3,7 +3,7 @@ const CACHE_NAME = 'after-client-shell-v3';
 const ARQUIVOS_PARA_CACHE = [
   './',
   './index.html',
-  './manifest.webmanifest'
+  './manifest.webmanifest',
   './favicon.png'
 ];
 
