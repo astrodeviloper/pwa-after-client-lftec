@@ -4,7 +4,7 @@ const ARQUIVOS_PARA_CACHE = [
   './',
   './index.html',
   './manifest.webmanifest',
-  './favicon.png'
+  './FAVICON.png'
 ];
 
 self.addEventListener('install', function(event) {
